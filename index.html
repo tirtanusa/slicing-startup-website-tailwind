@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cococart - The easiest way to run your business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --font-logo: "Archivo Black", sans-serif;
+        --font-body: "Inter", sans-serif;
+
+        --color-primary: #ffbc01;
+        --color-bgbase: #f5f5f5;
+        --color-hero-feature: #fff2cd;
+        --color-fontdesc: #717171;
+        --color-border-color: #f2f4f7;
+      }
+      @layer base {
+        h1 {
+          @apply text-5xl font-bold text-center lg:text-[65px];
+        }
+        h2 {
+          @apply text-4xl font-bold text-center lg:text-[40px];
+        }
+      }
+      @layer components {
+        .hero-card {
+          @apply bg-hero-feature text-black font-semibold  w-[150px] h-[125px] rounded-lg flex flex-col items-center justify-center;
+        }
+        .featured-in {
+          @apply h-[24px];
+        }
+        .feature-card {
+          @apply bg-bgbase rounded-2xl my-8 flex flex-col items-center gap-2;
+        }
+        .feature-card > p {
+          @apply text-lg;
+        }
+        .feature-card > button {
+          @apply bg-black text-white rounded-4xl px-[14px] py-1.5 font-medium;
+        }
+        .feature-card-list {
+          @apply grid grid-cols-2 text-[13px] w-full;
+        }
+        .much-more-card {
+          @apply bg-bgbase p-[20px] justify-between h-[128px] flex flex-col text-base font-semibold rounded-2xl;
+        }
+        .pricing-card {
+          @apply border-2 border-bgbase flex flex-col justify-between items-center gap-2 p-[16px] rounded-2xl;
+        }
+        .bundle-card {
+          @apply py-[40px] px-[25px] flex flex-col items-center bg-white rounded-2xl lg:w-[330px];
+        }
+        .qna-card {
+          @apply flex justify-between bg-bgbase text-[20px] px-[20px] py-[18px] items-center rounded-xl lg:w-[700px] lg:mx-auto;
+        }
+        .testimonies-card {
+          @apply flex flex-col bg-bgbase px-[20px] py-[18px] items-start rounded-xl mt-13 lg:h-[250px];
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="bg-primary">
+      <nav
+        class="flex justify-between px-[20px] py-[15px] font-logo fixed top-0 bg-primary w-full"
+      >
+        <!-- logo -->
+        <img
+          src="https://framerusercontent.com/images/auNqJbUka6Srt2lck6NcAuq1jo.png"
+          alt=""
+          class="w-[180px]"
+        />
+        <!-- logo -->
+        <!-- hamburger menu -->
+        <p>☰</p>
+        <!-- hamburger menu -->
+      </nav>
+    </header>
+    <!-- header -->
+
+    <main>
+      <!-- hero -->
+      <section
+        class="bg-primary justify-center flex flex-col items-center pt-[100px]"
+      >
+        <p
+          class="font-bold font-body rounded-2xl border-3 box-content text-sm p-1"
+        >
+          Trusted by 70,000+ businesses
+        </p>
+        <h1 class="mt-4 mx-2">Manage your shop smarter with</h1>
+        <h1 class="mb-4">one simple app</h1>
+        <p class="text-[18px] my-2 mx-8 font-normal text-center">
+          Cococart is the easiest way to start an inline store and grow your
+          business
+        </p>
+        <button
+          class="border-3 bg-white font-semibold rounded-3xl p-2 text-[20px] flex items-center gap-2 my-2"
+        >
+          <p>Start your free trial</p>
+          <i data-lucide="move-right"></i>
+        </button>
+        <div class="grid grid-cols-2 gap-4 my-2 lg:grid-cols-6">
+          <!-- feature -->
+          <div class="hero-card">
+            <i data-lucide="laptop-minimal" width="50" height="50"></i>
+            <p>Online Store</p>
+          </div>
+          <div class="hero-card">
+            <i data-lucide="store" width="50" height="50"></i>
+            <p>POS</p>
+          </div>
+          <div class="hero-card">
+            <i data-lucide="scan-qr-code" width="50" height="50"></i>
+            <p>QR Code Menu</p>
+          </div>
+          <div class="hero-card">
+            <i data-lucide="calendar-check" width="50" height="50"></i>
+            <p>Reservations</p>
+          </div>
+          <div class="hero-card">
+            <i data-lucide="megaphone" width="50" height="50"></i>
+            <p>Email Marketing</p>
+          </div>
+          <div class="hero-card">
+            <i data-lucide="coins" width="50" height="50"></i>
+            <p>Loyalty Points</p>
+          </div>
+          <!-- feature -->
+        </div>
+        <!-- client -->
+        <div class="flex gap-6 my-4">
+          <p class="text-lg font-medium">Featured in</p>
+          <img
+            src="https://framerusercontent.com/images/ZlO53u6J1LIGboQR0ZPxbnJT6Hs.png?width=220&height=96"
+            alt="yahoo"
+            class="featured-in"
+          />
+          <img
+            src="https://framerusercontent.com/images/WRZCcSr8ODgFU8h0LDPuvivyILA.png?width=312&height=96"
+            alt="FORTUNE"
+            class="featured-in"
+          />
+          <img
+            src="https://framerusercontent.com/images/q7i1e8fPb6bkBZdYJ4LDR47M10.png?width=1280&height=196"
+            alt="TechCrunch"
+            class="featured-in"
+          />
+          <img
+            src="https://framerusercontent.com/images/56BarIFhSHugHClXuFDcnZ66vM.png?width=500&height=100"
+            alt="YCombinator"
+            class="featured-in"
+          />
+        </div>
+        <!-- client -->
+      </section>
+      <!-- hero -->
+      <!-- vision -->
+      <section class="flex bg-bgbase justify-center py-8">
+        <div
+          class="bg-white w-[600px] px-[40px] py-[18px] rounded-2xl lg:w-3/5"
+        >
+          <h2>Cococart is made for local businesses</h2>
+          <p class="text-center text-sm my-6">
+            We're on a mission to transform independent businesses to accept
+            online orders. Cococart empowers small businesses to manage their
+            own sales without apps or marketplaces that charge unsustainable
+            fees and comissions.
+          </p>
+        </div>
+      </section>
+      <!-- vision -->
+      <!-- feature card-->
+      <section class="px-[20px] pt-[40px]">
+        <h1>Everything your shop needs, in one simple, affordable app</h1>
+        <div class="feature-card">
+          <p class="font-extrabold text-[24px] mt-4">Online Store</p>
+          <p>Launch a website and sell online</p>
+          <button>Create Store</button>
+          <div class="feature-card-list">
+            <div class="flex flex-col items-center">
+              <i data-lucide="laptop-minimal"></i>
+              <p>Theme</p>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="circle-pound-sterling"></i>
+                <p>Any Payments</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="file-text"></i>
+                <p>Inventory</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="link-2"></i>
+                <p>Link in bio</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://framerusercontent.com/images/bKJGk36bcFBF3qmVbdvdhZ9KNaE.png?width=1300&height=841"
+            alt="Online apps"
+            class="h-[230px]"
+          />
+        </div>
+        <div class="feature-card">
+          <p class="font-extrabold text-[24px] mt-4">Point of Sale (POS)</p>
+          <p>Take orders on iOS and Android</p>
+          <button>Download app</button>
+          <div class="feature-card-list">
+            <div class="flex flex-col items-center">
+              <i data-lucide="notepad-text"></i>
+              <p>Open Tickets</p>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="clock-fading"></i>
+                <p>Shifts</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="credit-card"></i>
+                <p>Payment terminal</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="chef-hat"></i>
+                <p>Kitchen Display</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://framerusercontent.com/images/jJsWZdt92x9ykzH54f0BxABHsHw.png?width=1920&height=1126"
+            alt="Point of sales"
+            class="h-[230px]"
+          />
+        </div>
+        <div class="feature-card">
+          <p class="font-extrabold text-[24px] mt-4">Bookings</p>
+          <p>Take reservations & appointments</p>
+          <button>Set up bookings</button>
+          <div class="feature-card-list">
+            <div class="flex flex-col items-center">
+              <i data-lucide="bell-ring"></i>
+              <p>Reminders</p>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="mail-open"></i>
+                <p>Custom questions</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="circle-pound-sterling"></i>
+                <p>Deposit</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="calendar"></i>
+                <p>Calendar</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://framerusercontent.com/images/1z5XeJZMgkarVVrgEFAaKMf1YHE.png?width=1300&height=841"
+            alt="Bookings"
+            class="h-[230px]"
+          />
+        </div>
+        <div class="feature-card">
+          <p class="font-extrabold text-[24px] mt-4">Marketing</p>
+          <p>Send emails & earn loyalty points</p>
+          <button>Launch a campaign</button>
+          <div class="feature-card-list">
+            <div class="flex flex-col items-center">
+              <i data-lucide="coins"></i>
+              <p>Loyalty</p>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="mail"></i>
+                <p>Email Marketing</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="user-round-check"></i>
+                <p>CRM</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex flex-col items-center">
+                <i data-lucide="circle-percent"></i>
+                <p>Promo Codes</p>
+              </div>
+            </div>
+          </div>
+          <img
+            src="https://framerusercontent.com/images/MLPHe1RPNw3BAzCAGLguaWP5Hl8.png?width=1300&height=1100"
+            alt="Online apps"
+            class="h-[240px]"
+          />
+        </div>
+      </section>
+      <!-- feature card -->
+      <!-- much more -->
+      <section class="pb-[20px]">
+        <h1 class="text-[30px]">And much, much more...</h1>
+        <div class="grid grid-cols-2 my-6 gap-4 px-[20px]">
+          <div class="much-more-card">
+            <i data-lucide="scan-qr-code" width="40" height="40"></i>
+            <p>QR code menu</p>
+          </div>
+          <div class="much-more-card">
+            <i data-lucide="chart-column" width="40" height="40"></i>
+            <p>Analytics</p>
+          </div>
+          <div class="much-more-card col-span-full">
+            <i data-lucide="shopping-cart" width="40" height="40"></i>
+            <p>Abandoned cart recovery</p>
+          </div>
+          <div class="much-more-card col-span-full">
+            <i data-lucide="circle-pound-sterling" width="40" height="40"></i>
+            <p>Accept all types of payments</p>
+          </div>
+          <div class="much-more-card">
+            <i data-lucide="message-square-more" width="40" height="40"></i>
+            <p>Reviews</p>
+          </div>
+          <div class="much-more-card">
+            <i data-lucide="package" width="40" height="40"></i>
+            <p>Deliveries</p>
+          </div>
+        </div>
+      </section>
+      <!-- much more -->
+      <!-- sell almost anything -->
+      <section class="bg-bgbase px-[20px] pt-[40px]">
+        <h2>Sell (almost) anything</h2>
+        <h2>you can think of...</h2>
+
+        <div class="flex flex-col items-center gap-2 py-[40px]">
+          <div
+            class="flex gap-2 text-xl items-start text-left w-[300px] items-start border-3 rounded-4xl py-2 px-4 bg-white"
+          >
+            <i data-lucide="coffee" width="24" height="24"></i>
+            <p>Restaurants & cafés</p>
+          </div>
+          <div
+            class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
+          >
+            <i data-lucide="shopping-bag" width="24" height="24"></i>
+            <p>Retail stores</p>
+          </div>
+          <div
+            class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
+          >
+            <i data-lucide="scissors" width="24" height="24"></i>
+            <p>Salon & spas</p>
+          </div>
+          <div
+            class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
+          >
+            <i data-lucide="wrench" width="24" height="24"></i>
+            <p>Service Providers</p>
+          </div>
+          <img
+            src="https://framerusercontent.com/images/4D19WOBobPGEpaf8HOWUJ0RbvY4.webp"
+            alt="Sell anything"
+            class="h-[350px]"
+          />
+        </div>
+      </section>
+      <!-- sell almost anything -->
+      <!-- pricing -->
+      <section class="py-[40px] px-[20px] flex flex-col items-center">
+        <h2 class="pb-3">Choose what you need</h2>
+        <p class="text-center text-sm py-3">
+          Cococart replaces a bunch of apps. Consolidate tools and save
+          thousands.
+        </p>
+        <a href="#" class="font-bold py-3 text-xl" style="color: #2c4194"
+          >See Pricing</a
+        >
+        <div class="grid grid-cols-2 gap-4 py-3 lg:grid-cols-3">
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/JSxrBQy6nHtYEuFETZfXe9Fgkw.png?width=96&height=96"
+              alt="Online store icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">Online Store</p>
+            <p class="text-fontdesc">Take online orders seamlessly</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/xs7uh1QJ8VSFgpF3zDscUMm1YQQ.png?width=96&height=96"
+              alt="POS Icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">Point of Sale</p>
+            <p class="text-fontdesc">Manage orders at your shop</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/RH9ct7wo1uCAJ4WpDHhIGz26p0E.png?width=96&height=96"
+              alt="QR Icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">QR Ordering</p>
+            <p class="text-fontdesc">Allow customers to scan to order</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/GPPys29dUHdixv2KoihHa3YfCEw.png?width=96&height=96"
+              alt="Loyalty program"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">Loyalty Program</p>
+            <p class="text-fontdesc">Give points to frequent customers</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/xxdQWzEpu3lsckt3YsVZTYLWtY8.png?width=96&height=96"
+              alt="Email Icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">Email Marketing</p>
+            <p class="text-fontdesc">Send promotions and marketing</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/cxrU8PwyflibTVJCfTLyJtclAzM.png?width=96&height=96"
+              alt="Booking Icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">Bookings</p>
+            <p class="text-fontdesc">Take reservations and appointments</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/KJdkbBugitNKAL8QC1scsnpQI0.png?width=96&height=96"
+              alt="Kitchen Icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">Kitchen Display</p>
+            <p class="text-fontdesc">Show orders in your kitchen</p>
+          </div>
+          <div class="pricing-card">
+            <img
+              src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+              alt="CRM Icon"
+              class="w-[40px]"
+            />
+            <p class="font-bold text-xl">CRM</p>
+            <p class="text-fontdesc">Know your best customers</p>
+          </div>
+        </div>
+      </section>
+      <!-- pricing -->
+      <!-- bundles -->
+      <section class="py-[40px] px-[20px] bg-bgbase">
+        <div class="flex flex-col items-center">
+          <h2 class="pb-3">Save more with our bundles</h2>
+          <p class="text-center text-sm py-3">
+            Free 14-day trial. Cancel anytime.
+          </p>
+          <a
+            href="#"
+            class="font-bold py-3 lg:pb-8 text-xl"
+            style="color: #2c4194"
+            >See Pricing</a
+          >
+        </div>
+
+        <div class="py-3 flex flex-col lg:flex-row gap-8 lg:justify-center">
+          <div class="bundle-card">
+            <p class="text-[24px] font-bold">Value</p>
+            <p class="text-[18px]">For online sellers</p>
+            <button
+              class="p-3 border-3 w-full rounded-4xl text-[20px] font-semibold my-4"
+            >
+              Free trial
+            </button>
+
+            <div class="flex-col flex gap-2 items-center">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/JSxrBQy6nHtYEuFETZfXe9Fgkw.png?width=96&height=96"
+                  alt="Online store icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Online Store Pro</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/GPPys29dUHdixv2KoihHa3YfCEw.png?width=96&height=96"
+                  alt="Loyalty program"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Loyalty Progam</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/xxdQWzEpu3lsckt3YsVZTYLWtY8.png?width=96&height=96"
+                  alt="Email Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Email Marketing</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">CRM</p>
+              </div>
+            </div>
+          </div>
+          <div class="bundle-card border-3 border-black">
+            <p
+              class="bg-black rounded-xl text-white font-bold px-[14px] py-[7px] -mt-15"
+            >
+              MOST POPULAR
+            </p>
+            <p class="text-[24px] font-bold mt-6">Essentials</p>
+            <p class="text-[18px]">For growing Businesses</p>
+            <button
+              class="p-3 border-3 w-full rounded-4xl text-[20px] font-semibold my-4 bg-primary"
+            >
+              Free trial
+            </button>
+
+            <div class="flex flex-col items-center gap-2">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/JSxrBQy6nHtYEuFETZfXe9Fgkw.png?width=96&height=96"
+                  alt="Online store icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Online Store Pro</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/GPPys29dUHdixv2KoihHa3YfCEw.png?width=96&height=96"
+                  alt="Loyalty program"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Loyalty Progam</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/xxdQWzEpu3lsckt3YsVZTYLWtY8.png?width=96&height=96"
+                  alt="Email Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Email Marketing</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">CRM</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">POS Pro</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Kitchen Display</p>
+              </div>
+            </div>
+          </div>
+          <div class="bundle-card">
+            <p class="text-[24px] font-bold">Premium</p>
+            <p class="text-[18px]">For high-performing businesses</p>
+            <button
+              class="p-3 border-3 w-full rounded-4xl text-[20px] font-semibold my-4"
+            >
+              Free trial
+            </button>
+
+            <div class="flex flex-col items-center gap-2">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/JSxrBQy6nHtYEuFETZfXe9Fgkw.png?width=96&height=96"
+                  alt="Online store icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Online Store Pro</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/GPPys29dUHdixv2KoihHa3YfCEw.png?width=96&height=96"
+                  alt="Loyalty program"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Loyalty Progam</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/xxdQWzEpu3lsckt3YsVZTYLWtY8.png?width=96&height=96"
+                  alt="Email Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Email Marketing</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">CRM</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">POS Pro</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Kitchen Display</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">QR Code Ordering</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://framerusercontent.com/images/k7SBdS1C8f0LbQWHsASxCMtFH8.png?width=96&height=96"
+                  alt="CRM Icon"
+                  class="w-[24px]"
+                />
+                <p class="text-[18px] font-semibold">Bookings</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- bundles -->
+      <!-- QNA -->
+      <section class="py-[40px] px-[20px] bg-white">
+        <h2 class="mb-6">Got questions?</h2>
+        <div class="flex flex-col gap-2 py-6">
+          <div class="qna-card">
+            <p>Who is Cococart for?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>How much does it cost?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>Can I get a free trial?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>Where do my orders go?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>How do I collect payments?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>What fees are there?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>What countries do you support?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+          <div class="qna-card">
+            <p>How do I get in touch for custom solutions?</p>
+            <i data-lucide="move-down" width="20" height="20"></i>
+          </div>
+        </div>
+      </section>
+      <!-- QNA -->
+      <!-- testimonies -->
+      <section>
+        <h2>70,000+ businesses have</h2>
+        <h2>earned over $100 million</h2>
+        <p class="pt-4 pb-4 text-[14px] text-center">
+          Local businesses, entrepreneurs, and aritsans around the world have
+          switched to Cococart.
+        </p>
+        <div
+          class="flex flex-col gap-4 py-4 lg:grid lg:grid-cols-3 lg:w-1/2 lg:mx-auto"
+        >
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/9ONU8qmvS6PJX3cA99J1rseEfY.jpeg?width=150&height=150"
+              alt="Mama Spice Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Mama Spice</p>
+            <p class="font-base py-2">
+              "Such an incredible and easy website for a home business like us.
+              It definitely helps us in getting more sales and make our life 10x
+              easier!"
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/2PE8O3sZcgwbC20KfVD32ol2yXo.jpeg?width=150&height=150"
+              alt="Penthouse kitchen and bakery Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">
+              The Penthouse Kitchen and Bakery
+            </p>
+            <p class="font-base py-2">
+              "The best online platform for small businesses!"
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/hZ9QY50TvNzOy1e99bKi1lCrK0.jpeg?width=150&height=150"
+              alt="Puff 'N Batter Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Puff 'N Batter</p>
+            <p class="font-base py-2">
+              "YES! Instantly fell in love with Cococart! It was so easy to use.
+              I also love how attractive it looks."
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/COxElmkGyhq2ABSZBeQwBLiTY.png?width=1200&height=12000"
+              alt="Merienda Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Merienda</p>
+            <p class="font-base py-2">
+              "So fast to edit and so smooth to use. I must say, this is way way
+              better than the other platforms."
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/eKIGr24NpR8M8G2LAR3LHInj4c.jpeg?width=150&height=150"
+              alt="Paper burn Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Paper Burn</p>
+            <p class="font-base py-2">
+              "I love it! I should've done this sooner."
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/PhZa7YwUNracUNmAV0Re5IbyKUU.jpg?width=150&height=150"
+              alt="Jacob May Photography Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Jacoby May Photography</p>
+            <p class="font-base py-2">
+              "Cococart is EXACTLY what I need for my business. I've been
+              working on my site for 2 years and it's still not published. So
+              thank you for taking this off me."
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/PPXTkBTJqdZCl0OonlnH9xjIjI.jpg?width=150&height=150"
+              alt="Kraft Kind Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Kraft Kind</p>
+            <p class="font-base py-2">
+              "We've switched our ordering platform to Cococart. We're surprised
+              how simple it is to set up, how clean and straightforward the
+              website looks."
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/OPxb8nlPi5EZ6IUhTeogmedPXw.png?width=500&height=500"
+              alt="Filled 'N Frosted Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Filled 'N Frosted</p>
+            <p class="font-base py-2">
+              "I migrated from Shopify. I've been using Cococart for close to a
+              year and it only gets better! My Dad manages his own store on
+              Cococart too!"
+            </p>
+          </div>
+          <div class="testimonies-card">
+            <img
+              src="https://framerusercontent.com/images/PZNDAQAsDNgiQTTuEpraQFqRho.jpeg?width=150&height=150"
+              alt="Valerie's Icon"
+              height="70px"
+              width="70px"
+              class="rounded-full border-1 border-black -my-13"
+            />
+            <p class="mt-18 text-[18px] font-bold">Valerie's Kitchen</p>
+            <p class="font-base py-2">
+              "Wow! Is it really all this easy? A little too good to be true!"
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- testimonies -->
+      <section class="bg-bgbase px-[20px] py-[40px]">
+        <div
+          class="bg-white flex flex-col items-center py-[25px] rounded-2xl lg:w-3/5 lg:mx-auto lg:flex-row lg:justify-between lg:px-[60px] lg:py-[40px]"
+        >
+          <h2 class="py-4">Try Cococart for your shop today.</h2>
+          <div
+            class="flex items-center gap-2 border-3 rounded-full w-fit py-2 px-4 mt-4"
+          >
+            <p class="font-semibold">Start your free trial</p>
+            <i data-lucide="move-right" width="20" height="20"></i>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="flex flex-col items-center py-[40px] bg-primary">
+      <!-- logo -->
+      <img
+        src="https://framerusercontent.com/images/auNqJbUka6Srt2lck6NcAuq1jo.png?width=500&height=72"
+        alt=""
+        class="h-[28px]"
+      />
+      <!-- logo -->
+      <p class="pb-6 pt-4">Everything you need to sell anything</p>
+      <div class="lg:flex lg:flex-row lg:justify-center">
+        <div class="flex flex-col items-center gap-1 lg:w-[280px]">
+          <p class="py-4"><strong>Our Products</strong></p>
+          <a href="#">Online Store</a>
+          <a href="#">Point of Sale (POS)</a>
+          <a href="#">QR Menu</a>
+          <a href="#">Loyalty Points</a>
+          <a href="#">Email Marketing</a>
+          <a href="#">Payment Terminal</a>
+        </div>
+        <div class="flex flex-col items-center gap-1 lg:w-[280px]">
+          <a href="#" class="py-4"><strong>Support</strong></a>
+          <a href="#">Resources</a>
+          <a href="#">Help Center</a>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+        </div>
+        <div class="flex flex-col items-center gap-1 lg:w-[280px]">
+          <a href="#" class="py-4"><strong>Company</strong></a>
+          <a href="#">Pricing</a>
+          <a href="#">We're Hiring</a>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
