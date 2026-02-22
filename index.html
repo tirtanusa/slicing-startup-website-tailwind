@@ -26,10 +26,10 @@
       }
       @layer base {
         h1 {
-          @apply text-5xl font-bold text-center lg:text-[65px];
+          @apply text-5xl font-bold text-center md:text-[65px];
         }
         h2 {
-          @apply text-4xl font-bold text-center lg:text-[40px];
+          @apply text-4xl font-bold text-center md:text-[40px];
         }
       }
       @layer components {
@@ -37,10 +37,10 @@
           @apply bg-hero-feature text-black font-semibold  w-[150px] h-[125px] rounded-lg flex flex-col items-center justify-center;
         }
         .featured-in {
-          @apply h-[24px];
+          @apply h-[24px] md:h-[34px];
         }
         .feature-card {
-          @apply bg-bgbase rounded-2xl my-8 flex flex-col items-center gap-2;
+          @apply bg-bgbase rounded-2xl my-8 flex flex-col items-center gap-2 shadow-lg md:w-1/2 md:mx-auto md:grid md:grid-cols-2;
         }
         .feature-card > p {
           @apply text-lg;
@@ -58,13 +58,13 @@
           @apply border-2 border-bgbase flex flex-col justify-between items-center gap-2 p-[16px] rounded-2xl;
         }
         .bundle-card {
-          @apply py-[40px] px-[25px] flex flex-col items-center bg-white rounded-2xl lg:w-[330px];
+          @apply py-[40px] px-[25px] flex flex-col items-center bg-white rounded-2xl md:w-[330px];
         }
         .qna-card {
-          @apply flex justify-between bg-bgbase text-[20px] px-[20px] py-[18px] items-center rounded-xl lg:w-[700px] lg:mx-auto;
+          @apply flex justify-between bg-bgbase text-[20px] px-[20px] py-[18px] items-center rounded-xl md:w-[700px] md:mx-auto;
         }
         .testimonies-card {
-          @apply flex flex-col bg-bgbase px-[20px] py-[18px] items-start rounded-xl mt-13 lg:h-[250px];
+          @apply flex flex-col bg-bgbase px-[20px] py-[18px] items-start rounded-xl mt-13 md:h-[250px];
         }
       }
     </style>
@@ -73,17 +73,34 @@
     <!-- header -->
     <header class="bg-primary">
       <nav
-        class="flex justify-between px-[20px] py-[15px] font-logo fixed top-0 bg-primary w-full"
+        class="flex justify-between px-[20px] py-[15px] font-logo fixed top-0 bg-primary w-full z-50 md:px-[60px] md:py-[30px]"
       >
         <!-- logo -->
-        <img
-          src="https://framerusercontent.com/images/auNqJbUka6Srt2lck6NcAuq1jo.png"
-          alt=""
-          class="w-[180px]"
-        />
+        <div class="flex items-center md:w-1/2">
+          <img
+            src="https://framerusercontent.com/images/auNqJbUka6Srt2lck6NcAuq1jo.png"
+            alt=""
+            class="w-[180px] md:h-[32px] md:w-auto"
+          />
+          <div class="items-start hidden md:flex gap-12 font-medium mx-auto">
+            <p class="font-body text-[18px]">Home</p>
+            <p class="font-body text-[18px]">What We Do</p>
+            <p class="font-body text-[18px]">Pricing</p>
+          </div>
+        </div>
+
         <!-- logo -->
         <!-- hamburger menu -->
-        <p>☰</p>
+        <p class="md:hidden">☰</p>
+        <div class="hidden md:flex items-center gap-4">
+          <p class="font-body text-[18px] font-medium">Log In</p>
+          <button
+            class="font-body text-[18px] font-medium rounded-full border-3 p-[16px] bg-white flex items-center gap-2"
+          >
+            <p>Sign Up</p>
+            <i data-lucide="move-right"></i>
+          </button>
+        </div>
         <!-- hamburger menu -->
       </nav>
     </header>
@@ -92,26 +109,26 @@
     <main>
       <!-- hero -->
       <section
-        class="bg-primary justify-center flex flex-col items-center pt-[100px]"
+        class="bg-primary justify-center flex flex-col items-center pt-[100px] md:pt-[150px]"
       >
         <p
-          class="font-bold font-body rounded-2xl border-3 box-content text-sm p-1"
+          class="font-bold font-body rounded-2xl border-3 box-content text-sm p-1 mb-2"
         >
           Trusted by 70,000+ businesses
         </p>
         <h1 class="mt-4 mx-2">Manage your shop smarter with</h1>
         <h1 class="mb-4">one simple app</h1>
-        <p class="text-[18px] my-2 mx-8 font-normal text-center">
+        <p class="text-[18px] my-2 mx-8 font-normal text-center md:text-[28px]">
           Cococart is the easiest way to start an inline store and grow your
           business
         </p>
         <button
-          class="border-3 bg-white font-semibold rounded-3xl p-2 text-[20px] flex items-center gap-2 my-2"
+          class="border-3 bg-white font-semibold rounded-3xl p-2 text-[20px] flex items-center gap-2 my-2 md:my-8"
         >
           <p>Start your free trial</p>
           <i data-lucide="move-right"></i>
         </button>
-        <div class="grid grid-cols-2 gap-4 my-2 lg:grid-cols-6">
+        <div class="grid grid-cols-2 gap-4 my-2 md:grid-cols-6 md:my-8">
           <!-- feature -->
           <div class="hero-card">
             <i data-lucide="laptop-minimal" width="50" height="50"></i>
@@ -140,7 +157,7 @@
           <!-- feature -->
         </div>
         <!-- client -->
-        <div class="flex gap-6 my-4">
+        <div class="flex gap-6 my-4 md:gap-12 md:mb-12 md:mt-8">
           <p class="text-lg font-medium">Featured in</p>
           <img
             src="https://framerusercontent.com/images/ZlO53u6J1LIGboQR0ZPxbnJT6Hs.png?width=220&height=96"
@@ -169,7 +186,7 @@
       <!-- vision -->
       <section class="flex bg-bgbase justify-center py-8">
         <div
-          class="bg-white w-[600px] px-[40px] py-[18px] rounded-2xl lg:w-3/5"
+          class="bg-white w-[600px] px-[40px] py-[18px] rounded-2xl md:w-3/5"
         >
           <h2>Cococart is made for local businesses</h2>
           <p class="text-center text-sm my-6">
@@ -183,30 +200,41 @@
       <!-- vision -->
       <!-- feature card-->
       <section class="px-[20px] pt-[40px]">
-        <h1>Everything your shop needs, in one simple, affordable app</h1>
-        <div class="feature-card">
-          <p class="font-extrabold text-[24px] mt-4">Online Store</p>
-          <p>Launch a website and sell online</p>
-          <button>Create Store</button>
-          <div class="feature-card-list">
-            <div class="flex flex-col items-center">
+        <h1 class="md:w-1/2 md:mx-auto">
+          Everything your shop needs, in one simple, affordable app
+        </h1>
+        <div class="feature-card sticky top-0 z-10 md:overflow-hidden">
+          <div
+            class="md:px-8 flex flex-col gap-4 md:order-1 items-center md:items-start"
+          >
+            <p class="font-extrabold text-[24px] mt-4">Online Store</p>
+            <p>Launch a website and sell online</p>
+            <button
+              class="bg-black text-white rounded-4xl px-[14px] py-1.5 font-medium md:w-fit"
+            >
+              Create Store
+            </button>
+          </div>
+
+          <div class="feature-card-list md:order-3">
+            <div class="flex flex-col items-center md:items-start md:px-8">
               <i data-lucide="laptop-minimal"></i>
               <p>Theme</p>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="circle-pound-sterling"></i>
                 <p>Any Payments</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="file-text"></i>
                 <p>Inventory</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="link-2"></i>
                 <p>Link in bio</p>
               </div>
@@ -215,32 +243,40 @@
           <img
             src="https://framerusercontent.com/images/bKJGk36bcFBF3qmVbdvdhZ9KNaE.png?width=1300&height=841"
             alt="Online apps"
-            class="h-[230px]"
+            class="h-[230px] md:w-full md:object-cover md:object-left md:row-span-2 md:order-2 md:w-[650px] md:h-[368px]"
           />
         </div>
-        <div class="feature-card">
-          <p class="font-extrabold text-[24px] mt-4">Point of Sale (POS)</p>
-          <p>Take orders on iOS and Android</p>
-          <button>Download app</button>
-          <div class="feature-card-list">
-            <div class="flex flex-col items-center">
+        <div class="feature-card sticky top-0 z-20">
+          <div
+            class="md:px-8 flex flex-col gap-4 md:order-1 items-center md:items-start"
+          >
+            <p class="font-extrabold text-[24px] mt-4">Point of Sale (POS)</p>
+            <p>Take orders on iOS and Android</p>
+            <button
+              class="bg-black text-white rounded-4xl px-[14px] py-1.5 font-medium md:w-fit"
+            >
+              Download app
+            </button>
+          </div>
+          <div class="feature-card-list md:order-3">
+            <div class="flex flex-col items-center md:items-start md:px-8">
               <i data-lucide="notepad-text"></i>
               <p>Open Tickets</p>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="clock-fading"></i>
                 <p>Shifts</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="credit-card"></i>
                 <p>Payment terminal</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="chef-hat"></i>
                 <p>Kitchen Display</p>
               </div>
@@ -249,32 +285,40 @@
           <img
             src="https://framerusercontent.com/images/jJsWZdt92x9ykzH54f0BxABHsHw.png?width=1920&height=1126"
             alt="Point of sales"
-            class="h-[230px]"
+            class="h-[230px] md:w-full md:object-cover md:object-left md:h-[400px] md:order-2 md:row-span-2"
           />
         </div>
-        <div class="feature-card">
-          <p class="font-extrabold text-[24px] mt-4">Bookings</p>
-          <p>Take reservations & appointments</p>
-          <button>Set up bookings</button>
-          <div class="feature-card-list">
-            <div class="flex flex-col items-center">
+        <div class="feature-card sticky top-0 z-30">
+          <div
+            class="md:px-8 flex flex-col gap-4 md:order-1 items-center md:items-start"
+          >
+            <p class="font-extrabold text-[24px] mt-4">Bookings</p>
+            <p>Take reservations & appointment</p>
+            <button
+              class="bg-black text-white rounded-4xl px-[14px] py-1.5 font-medium md:w-fit"
+            >
+              Set up bookings
+            </button>
+          </div>
+          <div class="feature-card-list md:order-3">
+            <div class="flex flex-col items-center md:items-start md:px-8">
               <i data-lucide="bell-ring"></i>
               <p>Reminders</p>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="mail-open"></i>
                 <p>Custom questions</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="circle-pound-sterling"></i>
                 <p>Deposit</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="calendar"></i>
                 <p>Calendar</p>
               </div>
@@ -283,32 +327,40 @@
           <img
             src="https://framerusercontent.com/images/1z5XeJZMgkarVVrgEFAaKMf1YHE.png?width=1300&height=841"
             alt="Bookings"
-            class="h-[230px]"
+            class="h-[230px] md:object-cover md:object-left md:h-[400px] md:order-2 md:row-span-2"
           />
         </div>
-        <div class="feature-card">
-          <p class="font-extrabold text-[24px] mt-4">Marketing</p>
-          <p>Send emails & earn loyalty points</p>
-          <button>Launch a campaign</button>
-          <div class="feature-card-list">
-            <div class="flex flex-col items-center">
+        <div class="feature-card sticky top-0 z-40">
+          <div
+            class="md:px-8 flex flex-col gap-4 md:order-1 items-center md:items-start"
+          >
+            <p class="font-extrabold text-[24px] mt-4">Marketing</p>
+            <p>Send emails & earn loyalty pointst</p>
+            <button
+              class="bg-black text-white rounded-4xl px-[14px] py-1.5 font-medium md:w-fit"
+            >
+              Launch a campaign
+            </button>
+          </div>
+          <div class="feature-card-list md:order-3">
+            <div class="flex flex-col items-center md:items-start md:px-8">
               <i data-lucide="coins"></i>
               <p>Loyalty</p>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="mail"></i>
                 <p>Email Marketing</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="user-round-check"></i>
                 <p>CRM</p>
               </div>
             </div>
             <div>
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center md:items-start md:px-8">
                 <i data-lucide="circle-percent"></i>
                 <p>Promo Codes</p>
               </div>
@@ -317,7 +369,7 @@
           <img
             src="https://framerusercontent.com/images/MLPHe1RPNw3BAzCAGLguaWP5Hl8.png?width=1300&height=1100"
             alt="Online apps"
-            class="h-[240px]"
+            class="h-[230px] md:object-cover md:object-left md:h-[400px] md:order-2 md:row-span-2"
           />
         </div>
       </section>
@@ -325,7 +377,9 @@
       <!-- much more -->
       <section class="pb-[20px]">
         <h1 class="text-[30px]">And much, much more...</h1>
-        <div class="grid grid-cols-2 my-6 gap-4 px-[20px]">
+        <div
+          class="grid grid-cols-2 my-6 gap-4 px-[20px] md:w-1/2 md:mx-auto md:grid-cols-4"
+        >
           <div class="much-more-card">
             <i data-lucide="scan-qr-code" width="40" height="40"></i>
             <p>QR code menu</p>
@@ -334,11 +388,11 @@
             <i data-lucide="chart-column" width="40" height="40"></i>
             <p>Analytics</p>
           </div>
-          <div class="much-more-card col-span-full">
+          <div class="much-more-card col-span-full md:col-span-2">
             <i data-lucide="shopping-cart" width="40" height="40"></i>
             <p>Abandoned cart recovery</p>
           </div>
-          <div class="much-more-card col-span-full">
+          <div class="much-more-card col-span-full md:col-span-2">
             <i data-lucide="circle-pound-sterling" width="40" height="40"></i>
             <p>Accept all types of payments</p>
           </div>
@@ -358,35 +412,39 @@
         <h2>Sell (almost) anything</h2>
         <h2>you can think of...</h2>
 
-        <div class="flex flex-col items-center gap-2 py-[40px]">
-          <div
-            class="flex gap-2 text-xl items-start text-left w-[300px] items-start border-3 rounded-4xl py-2 px-4 bg-white"
-          >
-            <i data-lucide="coffee" width="24" height="24"></i>
-            <p>Restaurants & cafés</p>
-          </div>
-          <div
-            class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
-          >
-            <i data-lucide="shopping-bag" width="24" height="24"></i>
-            <p>Retail stores</p>
-          </div>
-          <div
-            class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
-          >
-            <i data-lucide="scissors" width="24" height="24"></i>
-            <p>Salon & spas</p>
-          </div>
-          <div
-            class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
-          >
-            <i data-lucide="wrench" width="24" height="24"></i>
-            <p>Service Providers</p>
+        <div
+          class="flex flex-col items-center gap-2 py-[40px] md:flex-row md:justify-center"
+        >
+          <div class="md:order-1 md:flex md:flex-col md:gap-12">
+            <div
+              class="flex gap-2 text-xl items-start text-left w-[300px] items-start border-3 rounded-4xl py-2 px-4 bg-white"
+            >
+              <i data-lucide="coffee" width="24" height="24"></i>
+              <p>Restaurants & cafés</p>
+            </div>
+            <div
+              class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
+            >
+              <i data-lucide="shopping-bag" width="24" height="24"></i>
+              <p>Retail stores</p>
+            </div>
+            <div
+              class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
+            >
+              <i data-lucide="scissors" width="24" height="24"></i>
+              <p>Salon & spas</p>
+            </div>
+            <div
+              class="flex gap-2 text-xl items-start text-left w-[300px] items-start rounded-4xl py-2 px-5"
+            >
+              <i data-lucide="wrench" width="24" height="24"></i>
+              <p>Service Providers</p>
+            </div>
           </div>
           <img
             src="https://framerusercontent.com/images/4D19WOBobPGEpaf8HOWUJ0RbvY4.webp"
             alt="Sell anything"
-            class="h-[350px]"
+            class="h-[350px] md:h-[500px] md:objcet-contain"
           />
         </div>
       </section>
@@ -401,7 +459,7 @@
         <a href="#" class="font-bold py-3 text-xl" style="color: #2c4194"
           >See Pricing</a
         >
-        <div class="grid grid-cols-2 gap-4 py-3 lg:grid-cols-3">
+        <div class="grid grid-cols-2 gap-4 py-3 md:grid-cols-3">
           <div class="pricing-card">
             <img
               src="https://framerusercontent.com/images/JSxrBQy6nHtYEuFETZfXe9Fgkw.png?width=96&height=96"
@@ -486,13 +544,13 @@
           </p>
           <a
             href="#"
-            class="font-bold py-3 lg:pb-8 text-xl"
+            class="font-bold py-3 md:pb-8 text-xl"
             style="color: #2c4194"
             >See Pricing</a
           >
         </div>
 
-        <div class="py-3 flex flex-col lg:flex-row gap-8 lg:justify-center">
+        <div class="py-3 flex flex-col md:flex-row gap-8 md:justify-center">
           <div class="bundle-card">
             <p class="text-[24px] font-bold">Value</p>
             <p class="text-[18px]">For online sellers</p>
@@ -729,7 +787,7 @@
           switched to Cococart.
         </p>
         <div
-          class="flex flex-col gap-4 py-4 lg:grid lg:grid-cols-3 lg:w-1/2 lg:mx-auto"
+          class="flex flex-col gap-4 py-4 md:grid md:grid-cols-3 md:w-1/2 md:mx-auto"
         >
           <div class="testimonies-card">
             <img
@@ -865,7 +923,7 @@
       <!-- testimonies -->
       <section class="bg-bgbase px-[20px] py-[40px]">
         <div
-          class="bg-white flex flex-col items-center py-[25px] rounded-2xl lg:w-3/5 lg:mx-auto lg:flex-row lg:justify-between lg:px-[60px] lg:py-[40px]"
+          class="bg-white flex flex-col items-center py-[25px] rounded-2xl md:w-3/5 md:mx-auto md:flex-row md:justify-between md:px-[60px] md:py-[40px]"
         >
           <h2 class="py-4">Try Cococart for your shop today.</h2>
           <div
@@ -887,8 +945,8 @@
       />
       <!-- logo -->
       <p class="pb-6 pt-4">Everything you need to sell anything</p>
-      <div class="lg:flex lg:flex-row lg:justify-center">
-        <div class="flex flex-col items-center gap-1 lg:w-[280px]">
+      <div class="md:flex md:flex-row md:justify-center">
+        <div class="flex flex-col items-center gap-1 md:w-[280px]">
           <p class="py-4"><strong>Our Products</strong></p>
           <a href="#">Online Store</a>
           <a href="#">Point of Sale (POS)</a>
@@ -897,14 +955,14 @@
           <a href="#">Email Marketing</a>
           <a href="#">Payment Terminal</a>
         </div>
-        <div class="flex flex-col items-center gap-1 lg:w-[280px]">
+        <div class="flex flex-col items-center gap-1 md:w-[280px]">
           <a href="#" class="py-4"><strong>Support</strong></a>
           <a href="#">Resources</a>
           <a href="#">Help Center</a>
           <a href="#">Instagram</a>
           <a href="#">Facebook</a>
         </div>
-        <div class="flex flex-col items-center gap-1 lg:w-[280px]">
+        <div class="flex flex-col items-center gap-1 md:w-[280px]">
           <a href="#" class="py-4"><strong>Company</strong></a>
           <a href="#">Pricing</a>
           <a href="#">We're Hiring</a>
